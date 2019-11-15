@@ -94,17 +94,23 @@ const contactInfo = [];
 for (i = 0; i < graduates.length; i ++) {
   contactInfo.push(`${graduates[i].email}`);
 }
-// function gradInfo(graduates, index) {
-//     const contacts = graduates(index);
-//     contactInfo.push(gradInfo);
-//     return `${contacts.first_name} ${contacts.email}`;
-// }
 console.log(contactInfo);
+
+
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
-console.log(unisWithUni);
+let newArr2 = [];
+const include = graduates.map(function(currentValue){
+  return unisWithUni.push(currentValue.university);
+});
+for(let i = 0; i < graduates.length; i++){
+  if (unisWithUni[i].includes("Uni")){
+    newArr2.push(unisWithUni[i])
+  }
+}
 
+console.log(newArr2);
 
 // ==== ADVANCED Array Methods ====
 
